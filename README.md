@@ -152,5 +152,5 @@ Xem thư mục [`screenshots/`](screenshots/).
 
 - Họ và tên: **Nguyễn Thị Quế**
 - Mã sinh viên: **DTC245200583**
-- Lớp: [Điền lớp]
-- Môn học: [Điền tên môn học]
+- Lớp: CNNT-K23D
+- Môn học: Triển khai và quản trị hệ thống
