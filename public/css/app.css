@@ -1,0 +1,22 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.stat-card .display-6 {
+    font-weight: 600;
+}
+
+.actions {
+    white-space: nowrap;
+}

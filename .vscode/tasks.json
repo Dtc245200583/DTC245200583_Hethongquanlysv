@@ -1,0 +1,24 @@
+{
+  // Mở bằng: Ctrl+Shift+P → "Tasks: Run Task" → chọn tác vụ.
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "1. Setup lần đầu (.env, secrets, HTTPS cert)", "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/setup.ps1", "problemMatcher": [] },
+    { "label": "2. Docker: build + khởi chạy toàn bộ", "type": "shell",
+      "command": "docker compose up -d --build", "problemMatcher": [] },
+    { "label": "3. Seed dữ liệu mẫu", "type": "shell",
+      "command": "docker compose exec app php artisan db:seed --force", "problemMatcher": [] },
+    { "label": "Docker: trạng thái (ps)", "type": "shell",
+      "command": "docker compose ps", "problemMatcher": [] },
+    { "label": "Docker: xem log app + nginx", "type": "shell",
+      "command": "docker compose logs -f --tail=50 app nginx", "isBackground": true, "problemMatcher": [] },
+    { "label": "Docker: dừng (giữ dữ liệu)", "type": "shell",
+      "command": "docker compose down", "problemMatcher": [] },
+    { "label": "Docker: xóa sạch (MẤT dữ liệu)", "type": "shell",
+      "command": "docker compose down -v", "problemMatcher": [] },
+    { "label": "Kiểm tra bảo mật (hardening)", "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/check-security.ps1", "problemMatcher": [] },
+    { "label": "Sao lưu CSDL", "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/backup-db.ps1", "problemMatcher": [] }
+  ]
+}
