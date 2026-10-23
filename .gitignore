@@ -1,6 +1,7 @@
-# B?? m???t ??? tuy???t ?????i kh??ng commit
+# Bí mật — tuyệt đối không commit
 .env
-.env.docker
+.env.*
+!.env.example
 secrets/*
 !secrets/.gitkeep
 nginx/certs/*
@@ -13,7 +14,7 @@ nginx/certs/*
 /bootstrap/cache/*
 !/bootstrap/cache/.gitkeep
 
-# Kh??c
+# Khác
 backups/
 *.log
 .DS_Store
